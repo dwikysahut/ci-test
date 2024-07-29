@@ -1,9 +1,10 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 import { IoEarthOutline } from 'react-icons/io5';
 import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import RegisterInput from '../components/RegisterInput';
-import {useDispatch} from "react-redux";
-import {asyncRegisterUser} from "../states/users/action.js";
+import { asyncRegisterUser } from '../states/users/action.js';
 
 function RegisterPage() {
   const navigate = useNavigate();

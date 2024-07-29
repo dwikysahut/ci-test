@@ -1,14 +1,15 @@
+/* eslint-disable import/extensions */
 import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import {useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 import Loading from './components/Loading';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import Navigation from './components/Navigation';
 import RegisterPage from './pages/RegisterPage';
 import DetailPage from './pages/DetailPage';
-import {asyncPreloadProcess} from "./states/isPreload/action.js";
-import {asyncUnsetAuthUser} from "./states/authUser/action.js";
+import { asyncPreloadProcess } from './states/isPreload/action.js';
+import { asyncUnsetAuthUser } from './states/authUser/action.js';
 
 function App() {
   const {

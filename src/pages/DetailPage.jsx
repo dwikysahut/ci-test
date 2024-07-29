@@ -1,11 +1,12 @@
+/* eslint-disable import/extensions */
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import TalkDetail from '../components/TalkDetail';
 import TalkItem from '../components/TalkItem';
 import TalkReplyInput from '../components/TalkReplyInput';
-import {useDispatch, useSelector} from "react-redux";
-import {asyncReceiveTalkDetail, asyncToogleLikeTalkDetail} from "../states/talkDetail/action.js";
-import {asyncAddTalk} from "../states/talks/action.js";
+import { asyncReceiveTalkDetail, asyncToogleLikeTalkDetail } from '../states/talkDetail/action.js';
+import { asyncAddTalk } from '../states/talks/action.js';
 
 function DetailPage() {
   const { id } = useParams();
@@ -18,7 +19,6 @@ function DetailPage() {
   useEffect(() => {
     // @TODO: dispatch async action to get talk detail by id
     dispatch(asyncReceiveTalkDetail(id));
-
   }, [id, dispatch]);
 
   const onLikeTalk = () => {
